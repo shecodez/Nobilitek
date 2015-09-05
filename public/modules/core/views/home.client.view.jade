@@ -1,0 +1,17 @@
+//
+   Created by Jan on 9/4/2015.
+
+section(data-ng-controller='HomeController')
+    .row
+        .col-sm-6(ng-repeat='alert in alerts')
+            .row
+                .col-xs-4
+                    h1.pull-right
+                        button.btn(ng-class='alert.color', type='button')
+                            i.glyphicon(ng-class='alert.icon')
+                .col-xs-8
+                    h1 {{alert.total}}
+            .row
+                .col-xs-8.col-xs-offset-4
+                    span.text-uppercase.text-muted {{alert.description}}
+

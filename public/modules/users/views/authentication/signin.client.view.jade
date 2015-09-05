@@ -1,0 +1,41 @@
+//
+   Created by Jan on 9/5/2015.
+
+section.row(data-ng-controller='AuthenticationController')
+
+    .col-xs-offset-1.col-xs-10.col-md-offset-4.col-md-4.login-form
+        h3.text-center Sign In
+
+        form.signin.form-horizontal(data-ng-submit='signin()', autocomplete='off')
+            fieldset
+                .form-group
+                    .text-center.text-danger(data-ng-show='error')
+                        .alert.alert-danger(role='alert')
+                            strong(data-ng-bind='error')
+
+                .form-group
+                    label.sr-only(for='username') Email
+                    .input-group.input-group-lg
+                        span.input-group-addon
+                            i.glyphicon.glyphicon-user.text-muted
+                        input#username.form-control(type='text', name='username', data-ng-model='credentials.username', placeholder='Email')
+
+                .form-group
+                    label.sr-only(for='password') Password
+                    .input-group.input-group-lg
+                        span.input-group-addon
+                            i.glyphicon.glyphicon-lock.text-muted
+                        input#password.form-control(type='password', name='password', data-ng-model='credentials.password', placeholder='Password')
+
+                br
+                .text-center.form-group
+                    button.btn.btn-success.btn-lg.btn-block(type='submit') Sign in
+
+
+                .forgot-password
+                    .pull-left
+                        a(href='/#!/password/forgot') Forgot your password?
+                    .pull-right
+                        | or &nbsp;
+                        a(href='/#!/signup') Sign up
+
