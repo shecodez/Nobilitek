@@ -17,35 +17,35 @@ section.row(data-ng-controller='AuthenticationController')
                     label.sr-only(for='firstName') First Name
                     .input-group.input-group-lg
                         span.input-group-addon
-                            i.glyphicon.glyphicon-asterisk.text-muted
+                            i.text-muted.glyphicon.glyphicon-user
                         input#firstName.form-control(type='text', required='', name='firstName', data-ng-model='credentials.firstName', placeholder='First Name')
 
                 .form-group
                     label.sr-only(for='lastName') Last Name
                     .input-group.input-group-lg
                         span.input-group-addon
-                            i.glyphicon.glyphicon-asterisk.text-muted
+                            i.text-muted.glyphicon.glyphicon-user
                         input#lastName.form-control(type='text', name='lastName', data-ng-model='credentials.lastName', placeholder='Last Name')
 
                 .form-group
                     label.sr-only(for='email') Email
                     .input-group.input-group-lg
                         span.input-group-addon
-                            i.glyphicon.glyphicon-envelope.text-muted
-                        input#email.form-control(type='email', name='email', data-ng-model='credentials.email', placeholder='Email')
+                            i.text-muted.glyphicon.glyphicon-envelope
+                        input#email.form-control(type='email', name='email', data-ng-model='credentials.email', placeholder='Email (academic)')
 
                 .form-group
                     label.sr-only(for='username') Username
                     .input-group.input-group-lg
                         span.input-group-addon
-                            i.glyphicon.glyphicon-user.text-muted
-                        input#username.form-control(type='text', name='username', data-ng-model='credentials.username', placeholder='Username')
+                            i.text-muted.fa.fa-key
+                        input#username.form-control(type='text', name='username', data-ng-model='credentials.username', placeholder='Access Key')
 
                 .form-group
                     label.sr-only(for='password') Password
                     .input-group.input-group-lg
                         span.input-group-addon
-                            i.glyphicon.glyphicon-lock.text-muted
+                            i.text-muted.glyphicon.glyphicon-lock
                         input#password.form-control(type='password', name='password', data-ng-model='credentials.password', placeholder='Password')
 
                 br
