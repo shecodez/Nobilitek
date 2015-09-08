@@ -1,0 +1,21 @@
+//
+   Created by Jan on 9/8/2015.
+
+section(data-ng-controller='InstructorsController', data-ng-init='find()')
+    .page-header
+        h1 Instructors
+
+    .list-group
+        a.list-group-item(data-ng-repeat='instructor in instructors', data-ng-href='#!/instructors/{{instructor._id}}')
+            small.list-group-item-text
+
+                | Posted on&nbsp;
+                span(data-ng-bind="instructor.activity.date_created | date:'medium'")
+                | &nbsp;by&nbsp;
+                span(data-ng-bind='instructor.user.displayName')
+            h4.list-group-item-heading(data-ng-bind='instructor.name.first')
+
+    .alert.alert-warning.text-center(data-ng-hide='!instructors.$resolved || instructors.length')
+        | No Instructors yet, why don't you
+        a(href='/#!/instructors/create') create one
+        | ?
